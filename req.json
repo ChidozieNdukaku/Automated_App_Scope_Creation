@@ -1,0 +1,15 @@
+[
+    {
+        "name" :
+        "categories" : {
+            "artifacts" : { "..."}
+            "workloads" : { "..."}
+            "infrastructure" : { "..."}
+            "entity_scope" : { "..."}
+        }
+    }
+        "description" : 
+        "author" :
+        "updated" :
+
+]
