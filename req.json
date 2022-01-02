@@ -1,15 +1,53 @@
 [
     {
-        "name" :
+        "name" : "" ,
         "categories" : {
-            "artifacts" : { "..."}
-            "workloads" : { "..."}
-            "infrastructure" : { "..."}
-            "entity_scope" : { "..."}
-        }
-    }
-        "description" : 
-        "author" :
-        "updated" :
-
+            "artifacts" : {
+                "image" : {
+                    "expression" : "",
+                    "variables" : null
+                    } ,
+                "function" : {
+                    "expression" : "",
+                    "variables" : null
+                    },
+                "pas_droplets" : {
+                    "expression" : "",
+                    "variables" :null
+                    },
+                } ,
+            "workloads" : { 
+                "no_arc" : {
+                    "expression" :"",
+                    "variables" :null
+                    },
+                "kubernetes" : {
+                    "expression": "",
+                    "variables" : null
+                    },
+                "pas" : {
+                    "expression" : "",
+                    "variables" : null
+                    },
+                } ,
+            "infrastructure" : { 
+                "kubernetes" : {
+                    "expression" : "",
+                    "variables" : null
+                },
+                "host" : {
+                    "expression" : "",
+                    "variables" : null
+                } ,
+            } ,
+            "entity_scope" : {
+                "expression" : "",
+                "variables" : null
+             }
+        },
+    
+        "description" :  " Scope for the system" ,
+        "author" : "" ,
+        "updated_at" : "" ,
+    },
 ]

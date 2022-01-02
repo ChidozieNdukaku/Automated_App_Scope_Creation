@@ -1,1 +1,3 @@
-# Automated_App_Scope_Creation
+# Automated App Scope Creation
+
+A bash script that automates the creation of application scopes in Aqua Security.
