@@ -1,0 +1,12 @@
+---
+scopes:
+  -""
+users:""
+name : ""
+description : ""
+permissions : ""
+
+ldap : ""
+image_scopes : ""
+scope_description : ""
+
