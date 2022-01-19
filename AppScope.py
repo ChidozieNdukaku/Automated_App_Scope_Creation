@@ -172,25 +172,26 @@ def get_repos(token,hostname,):
         "Authorization": "Bearer " + token
     }
     endpoint = "https://" + hostname + "api/v2/repositories" 
-    payload = json
     res = requests.get(url =endpoint,verify=False, headers=request_headers, payload=json)
     repos = requests.get.json
+    
     list_of_repos = json.loads[repos]
-    list_of_repos = sorted(
-        list_of_repos, key = itemgetter('name')
-        'name'= str('name').split('/')
-        str1 = 'name'
-        if str1.isalpha():
-            return vendor
-        elif str1.isalanum():
-            return appcode
-        else:
-            return random
-    )    
+# sort the list of dictionaries based on the value of the key name which is split before /
+    for d in list_of_repos:
+        for value in d.items:
+            repo_name = str('name').split('/')[0]
+                str1 = repo_name
+                    if str1.isalpha():
+             
+                    elif str1.isalanum():
+            
+                    else:
+           
+   )    
 #writing the json to mapping.yaml
-
-with open("mapping.yaml", "w+") as file:
-    documents = yaml.dump(list_of_repos, f)
+reposJSON = json.dumps(list_of_repos, indent=4)
+with open("requirements.yaml", "w+",) as file:
+    documents = yaml.dump(reposJSON, f , allow_unicode=True, indent=4)
 
 
 def create_scope(token, hostname, scope_name, scope, scope_description):
