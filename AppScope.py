@@ -165,32 +165,33 @@ if "eng" in sys.argv[1]:
 token = get_jwt_token(hostname)
 # get list of repos, classify them into categories based on team appcode,
 #send results to mapping.yaml
-def get_repos(token,hostname,):
-  request_headers = {
-        "Accept": "application/json",
-        "Content-Type": "application/json; charset=UTF-8",
-        "Authorization": "Bearer " + token
-    }
-    endpoint = "https://" + hostname + "api/v2/repositories" 
-    res = requests.get(url =endpoint,verify=False, headers=request_headers, payload=json)
-    repos = requests.get.json
+    def get_repos(token,hostname,):
+        request_headers = {
+            "Accept": "application/json",
+            "Content-Type": "application/json; charset=UTF-8",
+            "Authorization": "Bearer " + token
+         }
+         endpoint = "https://" + hostname + "api/v2/repositories" 
+        res = requests.get(url =endpoint,verify=False, headers=request_headers, payload=json)
+        repos = requests.get.json
     
-    list_of_repos = json.loads[repos]
+        list_of_repos = json.loads[repos]
 # sort the list of dictionaries based on the value of the key name which is split before /
-    for d in list_of_repos:
-        for value in d.items:
-            repo_name = str('name').split('/')[0]
-                str1 = repo_name
-                    if str1.isalpha():
-             
+        for d in list_of_repos:
+            for value in d.items:
+                repo_name = str('name').split('/')[0]
+                     str1 = repo_name
+                        if str1.isalpha():
+             #if the key value is alphabeticals create a list of dictionary called vendor scope
                     elif str1.isalanum():
-            
+            #if the key value is alphanumeric,create a list of sictionary called appcode scope,group similar into dictionary
                     else:
-           
+           # if key value is empty,create list of dictionary called special scope
+           # create different json file with the different lists 
    )    
 #writing the json to mapping.yaml
 reposJSON = json.dumps(list_of_repos, indent=4)
-with open("requirements.yaml", "w+",) as file:
+with open("mapping.yaml", "w+",) as file:
     documents = yaml.dump(reposJSON, f , allow_unicode=True, indent=4)
 
 
